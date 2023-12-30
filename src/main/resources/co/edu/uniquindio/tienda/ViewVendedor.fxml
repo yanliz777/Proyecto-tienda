@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="503.0" prefWidth="656.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.tienda.controlador.ControllerVendedor">
+    <tabs>
+        <Tab text="Vendedor">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <SplitPane dividerPositions="0.4562899786780384" layoutX="6.0" orientation="VERTICAL" prefHeight="471.0" prefWidth="650.0">
+                            <items>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                    <children>
+                                        <TextField fx:id="txtNombreProducto" layoutX="130.0" layoutY="69.0" prefHeight="25.0" prefWidth="160.0" />
+                                        <TextField fx:id="txtCodigoProducto" layoutX="130.0" layoutY="27.0" prefHeight="25.0" prefWidth="160.0" />
+                                        <TextField fx:id="txtInventario" layoutX="447.0" layoutY="117.0" prefHeight="25.0" prefWidth="160.0" />
+                                        <TextField fx:id="txtPrecio" layoutX="447.0" layoutY="69.0" prefHeight="25.0" prefWidth="160.0" />
+                                        <Button fx:id="btnAgregar" layoutX="107.0" layoutY="169.0" mnemonicParsing="false" onAction="#actionAgregarProducto" prefHeight="25.0" prefWidth="90.0" text="Agregar" />
+                                        <Button fx:id="btnEliminar" layoutX="482.0" layoutY="169.0" mnemonicParsing="false" onAction="#actionEliminarProducto" prefHeight="25.0" prefWidth="90.0" text="Eliminar" />
+                                        <Button fx:id="btnActualizar" layoutX="306.0" layoutY="169.0" mnemonicParsing="false" onAction="#actionActualizarProducto" prefHeight="25.0" prefWidth="90.0" text="Actualizar" />
+                                        <Label layoutX="16.0" layoutY="31.0" text="Códipo Producto" />
+                                        <Label layoutX="16.0" layoutY="73.0" text="Nombre" />
+                                        <Label layoutX="16.0" layoutY="117.0" text="Tipo de Producto" />
+                                        <Label layoutX="334.0" layoutY="31.0" text="Fecha Caducidad" />
+                                        <Label layoutX="334.0" layoutY="73.0" text="Precio" />
+                                        <Label layoutX="334.0" layoutY="121.0" text="Inventario" />
+                                        <ComboBox fx:id="cbxTipoProducto" layoutX="130.0" layoutY="113.0" prefHeight="25.0" prefWidth="160.0" />
+                                        <DatePicker fx:id="dateFechaCaducidad" layoutX="447.0" layoutY="27.0" prefHeight="25.0" prefWidth="160.0" />
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="648.0">
+                                    <children>
+                                        <TableView fx:id="tblProductos" layoutY="5.0" prefHeight="243.0" prefWidth="648.0">
+                                            <columns>
+                                                <TableColumn fx:id="tblColumCodigo" prefWidth="81.0" text="Código" />
+                                                <TableColumn fx:id="tblColumNombre" prefWidth="161.0" text="Nombre" />
+                                                <TableColumn fx:id="tblColumTipoProducto" prefWidth="100.0" text="Tipo Producto" />
+                                                <TableColumn fx:id="tblColumFechaCaducidad" prefWidth="115.0" text="Fecha Caducidad" />
+                                                <TableColumn fx:id="tblColumPrecio" prefWidth="99.0" text="Precio" />
+                                                <TableColumn fx:id="tblColumInventario" prefWidth="91.0" text="Inventario" />
+                                            </columns>
+                                        </TableView>
+                                    </children>
+                                </AnchorPane>
+                            </items>
+                        </SplitPane>
+                    </children></AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="Untitled Tab 2">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+        </Tab>
+    </tabs>
+</TabPane>
