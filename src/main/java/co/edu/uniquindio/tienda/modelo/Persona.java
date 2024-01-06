@@ -10,7 +10,6 @@ public abstract class Persona {
     private String apellido;
     private LocalDate fechaNacimiento;
     private TipoEstadoCivil estadoCivil;
-
     private String direccion;
 
     public Persona() {

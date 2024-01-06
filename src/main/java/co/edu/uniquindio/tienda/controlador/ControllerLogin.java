@@ -59,7 +59,6 @@ public class ControllerLogin implements Initializable {
         else {
             System.out.println("Usuario no registrado o datos incorrectos");
         }
-
     }
     @FXML
     void actionRegistrarse(ActionEvent event) {
