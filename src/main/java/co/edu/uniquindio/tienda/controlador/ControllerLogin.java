@@ -1,23 +1,30 @@
 package co.edu.uniquindio.tienda.controlador;
 
+import co.edu.uniquindio.tienda.HelloApplication;
 import co.edu.uniquindio.tienda.controladorSecundario.ControladorSecundarioLogin;
 import co.edu.uniquindio.tienda.enumerados.TipoUsuario;
 import co.edu.uniquindio.tienda.fabrica.ModelFactory;
+import co.edu.uniquindio.tienda.modelo.Comprador;
 import co.edu.uniquindio.tienda.modelo.Usuario;
+import co.edu.uniquindio.tienda.modelo.Vendedor;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
 
 public class ControllerLogin implements Initializable {
 
+    private  HelloApplication helloApplication = new HelloApplication();
     public ModelFactory modelFactory = new ModelFactory();
     private final ObservableList<TipoUsuario> tipoUsuarios = FXCollections.observableArrayList();
 
@@ -39,9 +46,14 @@ public class ControllerLogin implements Initializable {
     @FXML
     private TextField txtEmail;
 
+
+    /*
+    metodo que me permite loguearse de acuerdo al usuario
+    * */
     @FXML
     void actionIngresar(ActionEvent event)
     {
+
         TipoUsuario usuario = cbxTipoUsuario.getSelectionModel().getSelectedItem();
         String email = txtEmail.getText();
         String contrasena = txtContrasena.getText();
@@ -53,12 +65,23 @@ public class ControllerLogin implements Initializable {
 
         boolean bandera = loginControladorSecundario.loginUsuario(usuario,email,contrasena);
 
-        if (bandera){
-            System.out.println("Bienvenido");
+        if (cbxTipoUsuario.getSelectionModel().getSelectedItem().equals(TipoUsuario.comprador)){
+            if (bandera){
+                cerrarVentana(btnIngresar);
+                helloApplication.cargarVentanaComprador();
+            }else {
+                System.out.println("no esta registrado");
+            }
+        }else if (cbxTipoUsuario.getSelectionModel().getSelectedItem().equals(TipoUsuario.vendedor)){
+            if (bandera){
+                cerrarVentana(btnIngresar);
+                helloApplication.cargarVentanaVendedor();
+            }else {
+                System.out.println("no esta registrado");
+            }
+
         }
-        else {
-            System.out.println("Usuario no registrado o datos incorrectos");
-        }
+
     }
     @FXML
     void actionRegistrarse(ActionEvent event) {
@@ -70,6 +93,12 @@ public class ControllerLogin implements Initializable {
         tipoUsuarios.add(TipoUsuario.comprador);
         cbxTipoUsuario.setItems(tipoUsuarios);
     }
+
+    public void cerrarVentana(Button btn) {
+        Stage stage = (Stage) btn.getScene().getWindow();
+        stage.close();
+    }
+
 
     public void iniciar()
     {

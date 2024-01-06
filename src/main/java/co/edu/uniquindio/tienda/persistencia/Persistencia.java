@@ -18,7 +18,7 @@ public class Persistencia {
 
     //----------------------------------IVANCHO----------------------------------------------------------------
 
-   /* public static final String rutaVendedor = "C:\\Users\\ivanr\\Documents\\Proyecto-tienda\\src\\main\\" +
+    public static final String rutaVendedor = "C:\\Users\\ivanr\\Documents\\Proyecto-tienda\\src\\main\\" +
             "java\\co\\edu\\uniquindio\\tienda\\archivos\\Vendedores.txt";
 
     public static final String rutaCompras = "C:\\Users\\ivanr\\Documents\\Proyecto-tienda\\src\\main\\java" +
@@ -28,7 +28,7 @@ public class Persistencia {
             "java\\co\\edu\\uniquindio\\tienda\\archivos\\Productos.txt";
 
     public static final String rutaCompradores = "C:\\Users\\ivanr\\Documents\\Proyecto-tienda\\src\\main\\" +
-            "java\\co\\edu\\uniquindio\\tienda\\archivos\\Compradores.txt";*/
+            "java\\co\\edu\\uniquindio\\tienda\\archivos\\Compradores.txt";
 
     //-----------------------------------EDUARD---------------------------------------------------------------
 
@@ -46,7 +46,7 @@ public class Persistencia {
 
     //-----------------------------------FRANCO---------------------------------------------------------------
 
-   public static final String rutaVendedor = "C:\\Users\\YAN FRANCO\\OneDrive\\Escritorio\\Carpeta Universidad\\proyectoVacaciones - copia\\proyectoTienda" +
+   /*public static final String rutaVendedor = "C:\\Users\\YAN FRANCO\\OneDrive\\Escritorio\\Carpeta Universidad\\proyectoVacaciones - copia\\proyectoTienda" +
            "\\tienda\\src\\main\\java\\co\\edu\\uniquindio\\tienda\\archivos\\Vendedores.txt";
 
     public static final String rutaCompras = "C:\\Users\\YAN FRANCO\\OneDrive\\Escritorio\\Carpeta Universidad\\proyectoVacaciones - copia\\proyectoTienda" +
@@ -57,7 +57,7 @@ public class Persistencia {
 
     public static final String rutaCompradores = "C:\\Users\\YAN FRANCO\\OneDrive\\Escritorio\\Carpeta Universidad\\proyectoVacaciones - copia\\proyectoTienda" +
             "\\tienda\\src\\main\\java\\co\\edu\\uniquindio\\tienda\\archivos\\Compradores.txt";
-
+*/
     public void guardarVendedor(ArrayList<Vendedor>listaVendedores) throws IOException {
         StringBuilder datos  = new StringBuilder();
         for (Vendedor v: listaVendedores) {
