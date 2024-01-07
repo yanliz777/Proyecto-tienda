@@ -197,6 +197,7 @@ public class ControllerVendedor implements Initializable
         tipoProductoObservableList.add(TipoProducto.mascotas);
         tipoProductoObservableList.add(TipoProducto.bebidas);
         tipoProductoObservableList.add(TipoProducto.carnes);
+        //cargamos los tipos de productos en el combo box:
         cbxTipoProducto.setItems(tipoProductoObservableList);
     }
 

@@ -17,19 +17,16 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-
 import java.net.URL;
 import java.util.ResourceBundle;
 
-
 public class ControllerLogin implements Initializable {
-
+    //Para darle manejo a las ventanas: helloApplication.
     private  HelloApplication helloApplication = new HelloApplication();
     public ModelFactory modelFactory = new ModelFactory();
     private final ObservableList<TipoUsuario> tipoUsuarios = FXCollections.observableArrayList();
 
     public ControladorSecundarioLogin loginControladorSecundario;
-
 
     @FXML
     private Button btnIngresar;
@@ -45,15 +42,13 @@ public class ControllerLogin implements Initializable {
 
     @FXML
     private TextField txtEmail;
-
-
     /*
-    metodo que me permite loguearse de acuerdo al usuario
+    Método que me permite iniciar sesión (logear) de acuerdo al usuario
+    que ingrese.
     * */
     @FXML
     void actionIngresar(ActionEvent event)
     {
-
         TipoUsuario usuario = cbxTipoUsuario.getSelectionModel().getSelectedItem();
         String email = txtEmail.getText();
         String contrasena = txtContrasena.getText();
@@ -67,8 +62,8 @@ public class ControllerLogin implements Initializable {
 
         if (cbxTipoUsuario.getSelectionModel().getSelectedItem().equals(TipoUsuario.comprador)){
             if (bandera){
-                cerrarVentana(btnIngresar);
-                helloApplication.cargarVentanaComprador();
+                cerrarVentana(btnIngresar);//cierra la ventana Login
+                helloApplication.cargarVentanaComprador();//carga(pone) la ventana del comprador
             }else {
                 System.out.println("no esta registrado");
             }
