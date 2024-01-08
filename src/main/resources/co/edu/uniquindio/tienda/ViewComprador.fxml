@@ -1,16 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.tienda.controlador.ControllerComprador">
+<AnchorPane fx:id="btnComprar" prefHeight="361.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.tienda.controlador.ControllerComprador">
    <children>
-      <Label layoutX="209.0" layoutY="139.0" prefHeight="57.0" prefWidth="112.0" text="Hola">
+      <TableView fx:id="tblProductos" prefHeight="247.0" prefWidth="608.0">
+        <columns>
+          <TableColumn fx:id="tblColumnaCodigo" prefWidth="88.0" text="Código" />
+          <TableColumn fx:id="tblColumnaNombre" prefWidth="84.0" text="Nombre" />
+            <TableColumn fx:id="tblColumnaTipoProducto" prefWidth="96.0" text="Tipo producto" />
+            <TableColumn fx:id="tblColumnaFechaCaducidad" prefWidth="106.0" text="Fecha caducidad" />
+            <TableColumn fx:id="tblColumnaPrecio" prefWidth="120.0" text="Precio" />
+            <TableColumn fx:id="tblColumnaInventario" prefWidth="112.0" text="Inventario" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtCantidad" layoutX="108.0" layoutY="270.0" prefHeight="27.0" prefWidth="91.0" />
+      <Label layoutX="28.0" layoutY="274.0" text="Cantidad:">
          <font>
-            <Font size="50.0" />
+            <Font name="System Bold" size="13.0" />
          </font>
       </Label>
+      <TextField fx:id="txtPrecioTotal" layoutX="461.0" layoutY="270.0" prefHeight="27.0" prefWidth="111.0" />
+      <Label layoutX="380.0" layoutY="274.0" text="Precio total:">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+      <Separator layoutX="301.0" layoutY="259.0" orientation="VERTICAL" prefHeight="69.0" prefWidth="3.0" />
    </children>
 </AnchorPane>

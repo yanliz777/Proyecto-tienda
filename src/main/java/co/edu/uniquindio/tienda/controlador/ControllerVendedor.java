@@ -224,7 +224,7 @@ public class ControllerVendedor implements Initializable
     }
 
     /**
-     * Método que me me permite inicializar el controlador
+     * Método que me permite inicializar el controlador
      */
     private void iniciar()
     {
