@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
@@ -8,7 +12,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="btnComprar" prefHeight="361.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.tienda.controlador.ControllerComprador">
+<AnchorPane fx:id="btnComprar" prefHeight="361.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.tienda.controlador.ControllerComprador">
    <children>
       <TableView fx:id="tblProductos" prefHeight="247.0" prefWidth="608.0">
         <columns>
@@ -26,12 +30,5 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <TextField fx:id="txtPrecioTotal" layoutX="461.0" layoutY="270.0" prefHeight="27.0" prefWidth="111.0" />
-      <Label layoutX="380.0" layoutY="274.0" text="Precio total:">
-         <font>
-            <Font name="System Bold Italic" size="13.0" />
-         </font>
-      </Label>
-      <Separator layoutX="301.0" layoutY="259.0" orientation="VERTICAL" prefHeight="69.0" prefWidth="3.0" />
    </children>
 </AnchorPane>
