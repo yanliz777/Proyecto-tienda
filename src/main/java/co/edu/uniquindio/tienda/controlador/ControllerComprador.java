@@ -6,6 +6,7 @@ import co.edu.uniquindio.tienda.fabrica.ModelFactory;
 import co.edu.uniquindio.tienda.modelo.Producto;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
@@ -80,5 +81,8 @@ public class ControllerComprador implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         iniciar();
+    }
+
+    public void actionComprar(ActionEvent actionEvent) {
     }
 }
